@@ -1,0 +1,19 @@
+package basic;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PageSource {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+ChromeDriver driver=new ChromeDriver();
+driver.manage().window().maximize();
+driver.get("https://www.instagram.com/accounts/emailsignup/");
+String ActualPageSource = driver.getPageSource();
+System.out.println(ActualPageSource );
+Thread.sleep(200);
+driver.quit();
+
+	}
+
+}
